@@ -20,7 +20,7 @@ const ReviewSection: React.FC = () => {
   const allReviews: Review[] = useMemo(() => [
     {
       id: 1,
-      name: "Priya Sharma",
+      name: "Priya Sharm",
       rating: 5,
       text: "I have been using the Arezou face Oil for the past 2 months and I am absolutely satisfied by the results. My skin looks radiant and feels so soft. The bergamot scent is divine!",
       date: "2 weeks ago",
@@ -59,7 +59,7 @@ const ReviewSection: React.FC = () => {
     },
     {
       id: 5,
-      name: "Rahul K.",
+      name: "Rafeal M.",
       rating: 4,
       text: "Good quality fragrance at decent value. Initially seemed light, but develops beautifully throughout the day.",
       date: "2 months ago",
@@ -86,10 +86,19 @@ const ReviewSection: React.FC = () => {
     },
     {
       id: 8,
-      name: "Sneha P.",
+      name: "Sarah P.",
       rating: 5,
       text: "Absolutely love this! My skin has never felt better. The natural ingredients make such a difference.",
       date: "3 weeks ago",
+      verified: true,
+      sentiment: "loved"
+    },
+    {
+      id: 9,
+      name: "Nafisat R.",
+      rating: 3,
+      text: "My skin feels so smooth, my black spot has cleared.",
+      date: "2 weeks ago",
       verified: true,
       sentiment: "loved"
     }
