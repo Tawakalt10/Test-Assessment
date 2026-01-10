@@ -73,8 +73,8 @@
   padding: 32px;
   border-radius: 20px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -118,7 +118,10 @@
 }
 
 .stat-icon {
-  font-size: 48px;
+  font-size: 36px;
+  position: absolute;
+  top: 16px;
+  right: 29px;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -129,6 +132,7 @@
 
 .stat-content {
   flex: 1;
+  margin-top: 8px;
 }
 
 .stat-number {
@@ -873,13 +877,13 @@
   }
   
   .stat-card {
-    padding: 20px;
-    flex-direction: column;
-    text-align: center;
+    padding: 24px;
   }
   
   .stat-icon {
     font-size: 32px;
+    top: 12px;
+    right: 12px;
   }
   
   .stat-number {
