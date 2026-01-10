@@ -1,0 +1,639 @@
+/* Product Tabs Section */
+.product-tabs-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: white;
+}
+
+.tabs-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.1);
+  animation: fadeInScale 0.8s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   TAB HEADERS
+============================================ */
+
+.tab-headers {
+  display: flex;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-bottom: 2px solid #e5e7eb;
+  padding: 8px;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.tab-button {
+  flex: 1;
+  min-width: 150px;
+  padding: 16px 24px;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.tab-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.tab-button:hover {
+  background: white;
+  color: #8b5cf6;
+  transform: translateY(-2px);
+}
+
+.tab-button:hover .tab-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tab-active {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.tab-active .tab-icon {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.tab-active:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   TAB CONTENT
+============================================ */
+
+.tab-content {
+  padding: 48px;
+  min-height: 400px;
+}
+
+.tab-panel {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content Header */
+.content-header {
+  margin-bottom: 32px;
+}
+
+.content-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #1f2937 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%);
+  border-radius: 2px;
+  animation: expandWidth 0.6s ease-out;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+/* Content Body */
+.content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-paragraph {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0;
+}
+
+.intro-text {
+  font-size: 17px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.highlight-text {
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+/* ============================================
+   BENEFITS SECTION (Description Tab)
+============================================ */
+
+.benefits-section {
+  padding: 32px 0;
+}
+
+.benefits-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.benefit-card:hover {
+  border-color: #c084fc;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.15);
+}
+
+.benefit-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.benefit-card:hover .benefit-icon {
+  animation: rotate 0.5s ease;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #8b5cf6;
+  margin: 0 0 6px 0;
+}
+
+.benefit-text {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Special Note */
+.special-note {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 16px;
+  border-left: 4px solid #f59e0b;
+}
+
+.note-icon {
+  flex-shrink: 0;
+}
+
+.note-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #f59e0b;
+}
+
+.note-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #78350f;
+  margin: 0;
+}
+
+/* ============================================
+   INGREDIENTS SECTION
+============================================ */
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ingredient-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #f3f4f6;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.5s ease-out backwards;
+}
+
+.ingredient-item:nth-child(1) { animation-delay: 0.1s; }
+.ingredient-item:nth-child(2) { animation-delay: 0.2s; }
+.ingredient-item:nth-child(3) { animation-delay: 0.3s; }
+.ingredient-item:nth-child(4) { animation-delay: 0.4s; }
+.ingredient-item:nth-child(5) { animation-delay: 0.5s; }
+.ingredient-item:nth-child(6) { animation-delay: 0.6s; }
+.ingredient-item:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.ingredient-item:hover {
+  border-color: #c084fc;
+  background: #faf5ff;
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+}
+
+.ingredient-marker {
+  flex-shrink: 0;
+}
+
+.ingredient-marker svg {
+  width: 24px;
+  height: 24px;
+  color: #8b5cf6;
+}
+
+.ingredient-content {
+  flex: 1;
+}
+
+.ingredient-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 6px 0;
+}
+
+.ingredient-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0;
+}
+
+.ingredients-footer {
+  margin-top: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 14px;
+  color: #166534;
+  margin: 0;
+}
+
+/* ============================================
+   DIRECTIONS SECTION
+============================================ */
+
+.directions-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: white;
+  border: 2px solid #f3f4f6;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  animation: fadeInRight 0.5s ease-out backwards;
+}
+
+.step-card:nth-child(1) { animation-delay: 0.1s; }
+.step-card:nth-child(2) { animation-delay: 0.2s; }
+.step-card:nth-child(3) { animation-delay: 0.3s; }
+.step-card:nth-child(4) { animation-delay: 0.4s; }
+.step-card:nth-child(5) { animation-delay: 0.5s; }
+.step-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.step-card:hover {
+  border-color: #c084fc;
+  background: #faf5ff;
+  transform: translateX(8px);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.15);
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-number {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.step-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Tips Section */
+.tips-section {
+  padding: 32px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  border-radius: 16px;
+  border: 2px solid #fbbf24;
+}
+
+.tips-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tips-icon {
+  width: 24px;
+  height: 24px;
+  color: #f59e0b;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tips-list li {
+  font-size: 15px;
+  color: #78350f;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.tips-list li::before {
+  content: '💡';
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+@media (max-width: 1024px) {
+  .tab-content {
+    padding: 40px 32px;
+  }
+  
+  .content-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-tabs-section {
+    padding: 40px 16px;
+  }
+
+  .tab-headers {
+    padding: 6px;
+    gap: 6px;
+    /* Better scrolling on mobile */
+    /* -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; Firefox */
+  }
+  
+  .tab-headers::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .tab-button {
+    min-width: 120px;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tab-content {
+    padding: 32px 24px;
+  }
+
+  .content-title {
+    font-size: 28px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .content-paragraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-tabs-section {
+    padding: 30px 12px;
+  }
+
+  .tab-button {
+    min-width: 100px;
+    padding: 10px 12px;
+    font-size: 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .tab-content {
+    padding: 24px 16px;
+  }
+
+  .content-title {
+    font-size: 24px;
+  }
+
+  .benefit-card,
+  .step-card,
+  .ingredient-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .benefit-icon {
+    font-size: 28px;
+  }
+  
+  .benefit-heading {
+    font-size: 15px;
+  }
+  
+  .step-title,
+  .ingredient-name {
+    font-size: 16px;
+  }
+  
+  .content-paragraph {
+    font-size: 14px;
+  }
+  
+  .tips-section {
+    padding: 24px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .tab-button {
+    min-width: 90px;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  
+  .tab-content {
+    padding: 20px 12px;
+  }
+  
+  .content-title {
+    font-size: 22px;
+  }
+  
+  .benefit-card,
+  .step-card,
+  .ingredient-item {
+    padding: 16px;
+  }
+}
