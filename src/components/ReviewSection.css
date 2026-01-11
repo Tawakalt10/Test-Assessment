@@ -288,6 +288,17 @@
   to { opacity: 1; }
 }
 
+.distribution-row-1 { animation-delay: 0s; }
+.distribution-row-2 { animation-delay: 0.1s; }
+.distribution-row-3 { animation-delay: 0.2s; }
+.distribution-row-4 { animation-delay: 0.3s; }
+.distribution-row-5 { animation-delay: 0.4s; }
+
+.distribution-bar-5star { width: 71%; }
+.distribution-bar-4star { width: 17%; }
+.distribution-bar-3star { width: 7%; }
+.distribution-bar-2star { width: 3%; }
+.distribution-bar-1star { width: 2%; }
 .filter-pill {
   padding: 12px 24px;
   border: 2px solid #e5e7eb;
@@ -366,10 +377,13 @@
   box-shadow: 0 8px 24px rgba(139, 92, 246, 0.12);
   border: 2px solid transparent;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: scaleIn 0.6s ease-out backwards;
+  animation: scaleIn 0.6s ease-out backwards;  
   position: relative;
   overflow: hidden;
 }
+.featured-card-1 { animation-delay: 0s; }
+.featured-card-2 { animation-delay: 0.15s; }
+.featured-card-3 { animation-delay: 0.3s; }
 
 @keyframes scaleIn {
   from {
@@ -588,6 +602,12 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(139, 92, 246, 0.15);
 }
+
+
+.featured-card-1 { animation-delay: 0s; }
+.featured-card-2 { animation-delay: 0.15s; }
+.featured-card-3 { animation-delay: 0.3s; }
+
 
 .review-card-header {
   display: flex;

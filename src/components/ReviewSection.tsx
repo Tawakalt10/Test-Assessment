@@ -197,8 +197,8 @@ const ReviewSection: React.FC = () => {
         <div className="rating-distribution">
           <h3 className="distribution-title">Rating Breakdown</h3>
           <div className="distribution-bars">
-            {ratingDistribution.map((rating, index) => (
-              <div key={rating.stars} className="distribution-row" style={{ animationDelay: `${index * 0.1}s` }}>
+           {ratingDistribution.map((rating, index) => (
+  <div key={rating.stars} className={`distribution-row distribution-row-${index + 1}`}>
                 <div className="distribution-stars">
                   {[...Array(rating.stars)].map((_, i) => (
                     <svg key={i} className="star-mini" viewBox="0 0 24 24" fill="currentColor">
@@ -207,10 +207,9 @@ const ReviewSection: React.FC = () => {
                   ))}
                 </div>
                 <div className="distribution-bar-container">
-                  <div 
-                    className="distribution-bar" 
-                    style={{ width: `${rating.percentage}%` }}
-                  ></div>
+                 <div className="distribution-bar-container">
+                     <div className={`distribution-bar distribution-bar-${rating.stars}star`}></div>
+                        </div>
                 </div>
                 <div className="distribution-count">{rating.count}</div>
                 <div className="distribution-percentage">{rating.percentage}%</div>
@@ -257,8 +256,8 @@ const ReviewSection: React.FC = () => {
         <div className="featured-carousel">
           <h3 className="carousel-title">⭐ Featured Reviews</h3>
           <div className="carousel-container">
-            {featuredReviews.map((review, index) => (
-              <div key={review.id} className="featured-card" style={{ animationDelay: `${index * 0.15}s` }}>
+           {featuredReviews.map((review, index) => (
+  <div key={review.id} className={`featured-card featured-card-${index + 1}`}>
                 <div className="featured-header">
                   <div className="featured-avatar">
                     {review.name.charAt(0)}
@@ -297,8 +296,8 @@ const ReviewSection: React.FC = () => {
         <div className="reviews-grid">
           <h3 className="grid-title">All Customer Reviews ({visibleReviews.length})</h3>
           <div className="reviews-cards">
-            {visibleReviews.map((review, index) => (
-              <div key={review.id} className="review-card" style={{ animationDelay: `${index * 0.1}s` }}>
+           {visibleReviews.map((review, index) => (
+  <div key={review.id} className={`review-card review-card-${index + 1}`}>
                 <div className="review-card-header">
                   <div className="review-avatar">
                     {review.name.charAt(0)}
