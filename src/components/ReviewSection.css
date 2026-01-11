@@ -14,9 +14,7 @@
   gap: 48px;
 }
 
-/* ============================================
-   HEADER
-============================================ */
+/* /* REVIEW-HEADER */
 
 .review-header {
   text-align: center;
@@ -47,9 +45,7 @@
   margin: 0;
 }
 
-/* ============================================
-   STATS DASHBOARD
-============================================ */
+/* /*STATS DASHBOARD */
 
 .stats-dashboard {
   display: grid;
@@ -166,9 +162,7 @@
   letter-spacing: 0.5px;
 }
 
-/* ============================================
-   RATING DISTRIBUTION
-============================================ */
+/* /* RATINGS */
 
 .rating-distribution {
   background: white;
@@ -279,9 +273,7 @@
   text-align: right;
 }
 
-/* ============================================
-   FILTER PILLS
-============================================ */
+
 
 .filter-section {
   display: flex;
@@ -347,9 +339,6 @@
   transform: scale(1.05) translateY(-2px);
 }
 
-/* ============================================
-   FEATURED CAROUSEL
-============================================ */
 
 .featured-carousel {
   animation: fadeIn 0.8s ease-out 0.8s backwards;
@@ -516,9 +505,7 @@
   font-weight: 500;
 }
 
-/* ============================================
-   SENTIMENT BADGES
-============================================ */
+
 
 .sentiment-badge {
   padding: 8px 16px;
@@ -557,10 +544,7 @@
   font-weight: 600;
 }
 
-/* ============================================
-   REVIEWS GRID
-============================================ */
-
+/* /* Reviews */
 .reviews-grid {
   animation: fadeIn 0.8s ease-out 1s backwards;
 }

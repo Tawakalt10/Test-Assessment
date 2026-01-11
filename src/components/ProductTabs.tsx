@@ -46,7 +46,7 @@ const ProductTabs: React.FC = () => {
         {/* Tab Content */}
         <div className="tab-content">
           
-          {/* DESCRIPTION TAB */}
+         
           {activeTab === 'description' && (
             <div className="tab-panel" key="description">
               <div className="content-header">

@@ -14,7 +14,7 @@ interface Review {
 
 const ReviewSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all');
-  const animateStats = true; // Static value, no state needed
+  const animateStats = true; 
 
   // Sample review data - defined as constant
   const allReviews: Review[] = useMemo(() => [
@@ -112,7 +112,7 @@ const ReviewSection: React.FC = () => {
     { stars: 1, count: 4, percentage: 2 }
   ];
 
-  // Use useMemo to derive filtered reviews - no setState in effect!
+  
   const visibleReviews = useMemo(() => {
     if (activeFilter === '5star') {
       return allReviews.filter(r => r.rating === 5);
@@ -123,7 +123,7 @@ const ReviewSection: React.FC = () => {
     } else if (activeFilter === 'featured') {
       return allReviews.filter(r => r.featured);
     }
-    return allReviews; // 'all' filter
+    return allReviews; 
   }, [activeFilter, allReviews]);
 
   const getSentimentColor = (sentiment: string) => {
@@ -253,7 +253,7 @@ const ReviewSection: React.FC = () => {
           </button>
         </div>
 
-        {/* Featured Reviews Carousel */}
+        
         <div className="featured-carousel">
           <h3 className="carousel-title">⭐ Featured Reviews</h3>
           <div className="carousel-container">
@@ -340,7 +340,7 @@ const ReviewSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+    
         <div className="review-cta">
           <div className="cta-content">
             <h3 className="cta-title">Share Your Experience</h3>
