@@ -15,9 +15,7 @@
   align-items: start;
 }
 
-/* ============================================
-   LEFT SIDE - Product Image & Features
-============================================ */
+/* /* LEFT SIDE */
 
 .product-left {
   display: flex;
@@ -69,7 +67,7 @@
   overflow: hidden;
 }
 
-/* Hide placeholder text when image is present */
+
 .image-placeholder:has(img) {
   background: transparent;
   border: none;
@@ -251,10 +249,7 @@
   margin: 0;
 }
 
-/* ============================================
-   RIGHT SIDE - Product Details
-============================================ */
-
+/* /* RIGHT SIDE */
 .product-right {
   display: flex;
   flex-direction: column;
@@ -686,9 +681,7 @@
   font-weight: 700;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-============================================ */
+/* /* RESPONSIVE DESIGN */
 
 @media (max-width: 1024px) {
   .product-container {

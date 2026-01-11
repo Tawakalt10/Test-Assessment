@@ -12,11 +12,10 @@ const Header: React.FC = () => {
       {/* Main Header */}
       <header className="header">
         <div className="header-container">
-          {/* Logo Section */}
           <div className="logo-section">
             <div className="logo-placeholder">
-              {/* LEAVE SPACE FOR LOGO IMAGE HERE */}
-               {/* <img src="/" alt="Are-zōu" className="logo-image" />  */}
+             
+           
             </div>
             <div className="brand-text">
               <h1 className="brand-name">Are-zōu</h1>

@@ -24,17 +24,14 @@ const ProductSection: React.FC = () => {
           {/* Product Image */}
           <div className="product-image-wrapper">
             <div className="product-image-container">
-              {/* PLACEHOLDER FOR YOUR IMAGE */}
-              {/* <div className="image-placeholder"> */}
-                {/* <span className="placeholder-text">Face oil</span> */}
-               
+             
 
                 <img 
                   src="/bg-img.jpg" 
                   alt="" 
                   className="product-image"
                 ></img>
-              {/* </div> */}
+             
               
               {/* Zoom Icon */}
               <button className="zoom-button" aria-label="View larger">
@@ -124,7 +121,7 @@ const ProductSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Size Selector */}
+         
           <div className="product-option">
             <label className="option-label">SIZE</label>
             <div className="size-selector">
